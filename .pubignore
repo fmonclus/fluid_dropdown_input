@@ -1,0 +1,22 @@
+# -------------------------------------------------------------------
+# Archivos generados de Flutter en el example (no se publican)
+# -------------------------------------------------------------------
+example/linux/flutter/generated_plugin_registrant.*
+example/macos/Flutter/GeneratedPluginRegistrant.swift
+example/windows/flutter/generated_plugin_registrant.*
+
+# -------------------------------------------------------------------
+# Lockfile del example (no necesario en pub.dev)
+# -------------------------------------------------------------------
+example/pubspec.lock
+
+# -------------------------------------------------------------------
+# Otros artefactos de build que tampoco interesan en pub.dev
+# -------------------------------------------------------------------
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+pubspec.lock
+build/
+coverage/
