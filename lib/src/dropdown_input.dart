@@ -710,9 +710,9 @@ class _ScrollWithThumbState extends State<_ScrollWithThumb> {
                     if (!_ready || !widget.controller.hasClients) {
                       return const SizedBox.shrink();
                     }
-                    
+
                     final pos = widget.controller.position;
-                    
+
                     if (!pos.hasContentDimensions) {
                       return const SizedBox.shrink();
                     }

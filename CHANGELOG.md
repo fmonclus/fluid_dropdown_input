@@ -1,3 +1,6 @@
+## 1.1.5
+- Formatted all Dart files with `dart format` to match official style.
+
 ## 1.1.4
 - Fix demo image to render consistently across pub.dev and GitHub (absolute URL in README + packaged screenshot).
 

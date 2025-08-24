@@ -94,7 +94,8 @@ class _ExampleScreenState extends State<ExampleScreen> {
                   placeholder: 'Select an option...',
                   searchEnabled: true,
                 ),
-                const SizedBox(height: 300), // Spacer to test dynamic positioning
+                const SizedBox(
+                    height: 300), // Spacer to test dynamic positioning
 
                 const Text(
                   'Dropdown at the bottom of the screen',
