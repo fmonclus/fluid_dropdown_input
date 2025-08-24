@@ -1,5 +1,9 @@
+## 1.1.8
+- Updated demo GIF with optimized size for faster loading on pub.dev.
+
 ## 1.1.7
-- **Major Documentation Overhaul:** The `README.md` 
+- **Major Documentation Overhaul:** The `README.md` was restructured and clarified for better usability.
+- Improved multilingual examples (ES/EN/PT).
 
 ## 1.1.6
 - Updated demo.gif with new video capture.
