@@ -63,7 +63,8 @@ class _ExampleScreenState extends State<ExampleScreen> {
                   style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                 ),
                 const SizedBox(height: 8),
-                FluidDropdownInput(languageCode: 'es', 
+                FluidDropdownInput(
+                  languageCode: 'es',
                   items: const [
                     DropdownItem(id: 1, label: 'Sí'),
                     DropdownItem(id: 2, label: 'No'),
@@ -77,7 +78,7 @@ class _ExampleScreenState extends State<ExampleScreen> {
                   },
                 ),
                 const SizedBox(height: 32),
-                
+
                 const Text(
                   'Dropdown with Search',
                   style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
@@ -94,7 +95,8 @@ class _ExampleScreenState extends State<ExampleScreen> {
                   placeholder: 'Select an option...',
                   searchEnabled: true,
                 ),
-                const SizedBox(height: 500), // Spacer to test dynamic positioning
+                const SizedBox(
+                    height: 500), // Spacer to test dynamic positioning
 
                 const Text(
                   'Dropdown at the bottom of the screen',

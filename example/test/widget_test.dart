@@ -6,7 +6,8 @@ import 'package:fluid_dropdown_input/fluid_dropdown_input.dart';
 void main() {
   // This is a basic "smoke test" for the widget.
   // It verifies that the widget can be created and rendered without crashing.
-  testWidgets('FluidDropdownInput builds without errors', (WidgetTester tester) async {
+  testWidgets('FluidDropdownInput builds without errors',
+      (WidgetTester tester) async {
     // Defines the list of items for the dropdown.
     final List<DropdownItem> items = [
       const DropdownItem(id: 1, label: 'Test Item 1'),
