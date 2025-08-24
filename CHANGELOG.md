@@ -1,3 +1,6 @@
+## 1.1.4
+- Fix demo image to render consistently across pub.dev and GitHub (absolute URL in README + packaged screenshot).
+
 ## 1.1.3
 - Linked to GitHub repository with demo video.
 - Minor docs update.
