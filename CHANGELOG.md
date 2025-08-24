@@ -1,3 +1,7 @@
+## 1.1.6
+- Updated demo.gif with new video capture.
+- Formatted code to match `dart format`.
+
 ## 1.1.5
 - Formatted all Dart files with `dart format` to match official style.
 

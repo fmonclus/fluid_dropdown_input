@@ -120,7 +120,9 @@ class _FluidDropdownInputState extends State<FluidDropdownInput>
     _filtered = List<DropdownItem>.from(widget.items);
     if (_selectedId != null) {
       final s = widget.items.where((e) => e.id == _selectedId);
-      if (s.isNotEmpty) _displayCtrl.text = s.first.label;
+      if (s.isNotEmpty) {
+        _displayCtrl.text = s.first.label;
+      }
     }
     _searchCtrl.addListener(_onSearchChanged);
   }
@@ -129,11 +131,10 @@ class _FluidDropdownInputState extends State<FluidDropdownInput>
   void didUpdateWidget(covariant FluidDropdownInput oldWidget) {
     super.didUpdateWidget(oldWidget);
 
+    // Si cambian los items
     if (!identical(oldWidget.items, widget.items)) {
       _filtered = List<DropdownItem>.from(widget.items);
-      if (_searchCtrl.text.trim().isNotEmpty) {
-        _applyFilter(_searchCtrl.text);
-      }
+      if (_searchCtrl.text.trim().isNotEmpty) _applyFilter(_searchCtrl.text);
       if (_selectedId != null &&
           !widget.items.any((e) => e.id == _selectedId)) {
         WidgetsBinding.instance.addPostFrameCallback((_) {
@@ -143,10 +144,18 @@ class _FluidDropdownInputState extends State<FluidDropdownInput>
       _afterItemsChanged();
     }
 
+    // Si cambia el valor externo
     if (widget.valueId != oldWidget.valueId) {
       WidgetsBinding.instance.addPostFrameCallback((_) {
         if (mounted) _updateSelectionFromId(widget.valueId);
       });
+    }
+
+    // Si cambia el idioma: cerrar overlay si estaba abierto y forzar rebuild para refrescar textos
+    if (widget.languageCode != oldWidget.languageCode) {
+      if (_isOpen) _removeOverlay(immediate: true);
+      setState(
+          () {}); // actualiza hint, tooltip y textos dependientes del idioma
     }
   }
 
@@ -173,7 +182,9 @@ class _FluidDropdownInputState extends State<FluidDropdownInput>
   double _searchHeaderHeight() => widget.searchEnabled ? 58.0 : 0.0;
 
   void _openOverlay() {
-    if (_isOpen) return;
+    if (_isOpen) {
+      return;
+    }
 
     // Modo con búsqueda: sheet scrollable robusto ante teclado
     if (widget.searchEnabled) {
@@ -203,7 +214,9 @@ class _FluidDropdownInputState extends State<FluidDropdownInput>
     WidgetsBinding.instance.addPostFrameCallback((_) {
       if (_listCtrl.hasClients) {
         final list = _listCtrl.positions.toList(growable: false);
-        if (list.length == 1) _listCtrl.jumpTo(0);
+        if (list.length == 1) {
+          _listCtrl.jumpTo(0);
+        }
       }
     });
   }
@@ -539,7 +552,9 @@ class _FluidDropdownInputState extends State<FluidDropdownInput>
         _filtered.length == 1 &&
         _searchCtrl.text.trim().isNotEmpty) {
       WidgetsBinding.instance.addPostFrameCallback((_) {
-        if (mounted) _select(_filtered.first);
+        if (mounted) {
+          _select(_filtered.first);
+        }
       });
     } else {
       _afterItemsChanged();
@@ -710,9 +725,7 @@ class _ScrollWithThumbState extends State<_ScrollWithThumb> {
                     if (!_ready || !widget.controller.hasClients) {
                       return const SizedBox.shrink();
                     }
-
                     final pos = widget.controller.position;
-
                     if (!pos.hasContentDimensions) {
                       return const SizedBox.shrink();
                     }
@@ -723,7 +736,6 @@ class _ScrollWithThumbState extends State<_ScrollWithThumb> {
 
                     final double fracV = track / (track + max);
                     final double thumbH = (track * fracV).clamp(24.0, track);
-
                     final double top =
                         (max <= 0.0) ? 0.0 : (pixels / max) * (track - thumbH);
 
