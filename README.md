@@ -4,7 +4,8 @@ An advanced dropdown input widget for Flutter, designed to be robust, customizab
 
 ## Demo
 
-![Fluid Dropdown Input demo](screenshots/demo.gif)
+<video src="https://raw.githubusercontent.com/fmonclus/fluid_dropdown_input/main/assets/demo.mp4" controls>
+</video>
 
 https://pub.dev/packages/fluid_dropdown_input
 

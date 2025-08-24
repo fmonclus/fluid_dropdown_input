@@ -1,3 +1,7 @@
+## 1.1.3
+- Linked to GitHub repository with demo video.
+- Minor docs update.
+
 ## 1.1.2
 - Minor metadata improvements for better package presentation.
 
