@@ -1,0 +1,31 @@
+name: fluid_dropdown_input
+description: Dropdown for Flutter with search, dynamic positioning and customizable UI. Robust on small phones (search opens in a scrollable bottom sheet).
+version: 1.1.2
+
+homepage: https://github.com/fmonclus/fluid_dropdown_input
+repository: https://github.com/fmonclus/fluid_dropdown_input
+
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+  flutter: ">=3.10.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+topics:
+  - dropdown
+  - search
+  - bottom-sheet
+  - mobile
+  - i18n
+
+screenshots:
+  - path: screenshots/demo.gif
+    description: Demo of the FluidDropdownInput widget in action.
+  

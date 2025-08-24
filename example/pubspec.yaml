@@ -1,0 +1,22 @@
+name: fluid_dropdown_input_example
+publish_to: "none"           
+description: Example for the fluid_dropdown_input package.
+
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+  flutter: ">=3.10.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  fluid_dropdown_input:
+    path: ..                 
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
+
