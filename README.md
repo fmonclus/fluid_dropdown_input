@@ -4,7 +4,7 @@ An advanced dropdown input widget for Flutter, designed to be robust, customizab
 
 ## Demo
 
-![Fluid Dropdown Input demo](screenshots/demo.gif)
+![Fluid Dropdown Input demo](screenshots/demo_small.gif.gif)
 
 **Repository:** [https://github.com/fmonclus/fluid_dropdown_input](https://github.com/fmonclus/fluid_dropdown_input)
 
@@ -24,7 +24,7 @@ Add this dependency to your `pubspec.yaml` file:
 
 ```yaml
 dependencies:
-  fluid_dropdown_input: ^1.1.6
+  fluid_dropdown_input: ^1.1.7
 ```
 
 Then, run `flutter pub get`.
@@ -67,7 +67,7 @@ class _MyScreenState extends State<MyScreen> {
             setState(() {
               _selectedId = item?.id;
             });
-            print('Selected item: ${item?.label}');
+            print('Selected item: ${item?.label} (ID: ${item?.id})');
           },
           placeholder: 'Select a fruit...',
           searchEnabled: true,

@@ -1,3 +1,6 @@
+## 1.1.7
+- **Major Documentation Overhaul:** The `README.md` 
+
 ## 1.1.6
 - Updated demo.gif with new video capture.
 - Formatted code to match `dart format`.
