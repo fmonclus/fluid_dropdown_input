@@ -24,7 +24,7 @@ Add this dependency to your `pubspec.yaml` file:
 
 ```yaml
 dependencies:
-  fluid_dropdown_input: ^1.0.0
+  fluid_dropdown_input: ^1.1.6
 ```
 
 Then, run `flutter pub get`.
