@@ -1,31 +1,53 @@
-# Miscellaneous
-*.class
-*.log
-*.pyc
-*.swp
+# -----------------------------
+# OS / herramientas
+# -----------------------------
 .DS_Store
-.atom/
-.buildlog/
-.history
-.svn/
-migrate_working_dir/
+Thumbs.db
+*.log
+*.tmp
+*.swp
 
-# IntelliJ related
+# -----------------------------
+# IDEs
+# -----------------------------
+# IntelliJ / Android Studio
 *.iml
 *.ipr
 *.iws
 .idea/
 
-# The .vscode folder contains launch configuration and tasks you configure in
-# VS Code which you may wish to be included in version control, so this line
-# is commented out by default.
-#.vscode/
+# VS Code (si quieres versionar ajustes, comenta esta línea)
+.vscode/
 
-# Flutter/Dart/Pub related
-# Libraries should not include pubspec.lock, per https://dart.dev/guides/libraries/private-files#pubspeclock.
-/pubspec.lock
-**/doc/api/
+# -----------------------------
+# Flutter / Dart / Pub
+# -----------------------------
 .dart_tool/
+.packages
+.flutter-plugins
 .flutter-plugins-dependencies
-/build/
-/coverage/
+.melos_tool/
+.pub-cache/
+.pub/
+build/
+coverage/
+doc/api/
+
+# En paquetes de LIBRERÍA no se versiona el lockfile de la raíz.
+# (El example sí puede tener su propio pubspec.lock)
+pubspec.lock
+
+# -----------------------------
+# Plataforma nativa generada
+# -----------------------------
+**/ios/Flutter/Flutter.framework
+**/ios/Flutter/Flutter.podspec
+**/ios/ServiceDefinitions.json
+**/ios/Runner/GeneratedPluginRegistrant.*
+**/macos/Flutter/GeneratedPluginRegistrant.*
+**/android/**/GeneratedPluginRegistrant.java
+**/android/**/GeneratedPluginRegistrant.kt
+**/linux/flutter/generated_plugin_registrant.*
+**/windows/flutter/generated_plugin_registrant.*
+**/web/**/flutter_service_worker.js
+**/web/**/flutter.js
